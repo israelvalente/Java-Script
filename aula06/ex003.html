@@ -3,28 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My first program</title>
+    <title>Data with JS</title>
     <style>
-        body{
-            background-color: #7b7bbb; /* Comentário em CSS */
-            font: normal 20pt Times;
-        }
-        h1 {
-            color: yellow;
-        }
+        body {font: 12pt Helvetica;}
+        button {font-size: 25pz; padding: 40px; background-color: rgb(158, 207, 219);}
     </style>
 </head>
 <body>
-    <h1>You awesome</h1> <!--Comentário em html-->
-    <p>Here we go!</p>
+    <h1>Working with data (v.2)</h1>
+    <button onclick="start()">Click to start</button>
+    <section id="result">
+        <p>Here will apear the result...</p>
+    </section>
     <script>
-       var n1 = Number.parseFloat(window.prompt('Type a number: '))
-       var n2 = Number(window.prompt('Type another number: '))
-       var s = n1 + n2
-       window.alert(`The sum between ${n1} an ${n2} is ${s}`)
-       
-       // (number + number) adição
-       // (str + str) concatenação
+        function start() {
+            let name = window.prompt('What is your name?')
+            let res = window.document.getElementById('result')
+            res.innerHTML = `<p>Hello, <strong>${name}</strong>! It is a pleasure to meet you!`
+        }
     </script>
 </body>
 </html>
