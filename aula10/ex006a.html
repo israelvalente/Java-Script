@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Events</title>
+    <style>
+        div#area {
+            font: normal 20pt Helvetica;
+            background: green;
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+
+        }
+    </style>
+</head>
+<body>
+    <div id="area">
+        You interact now! now!..
+    </div>
+    <script>
+        var a = window.document.getElementById('area')
+        a.addEventListener('click', toclick)
+        a.addEventListener('mouseenter', toin)
+        a.addEventListener('mouseout', goway)
+
+        function toclick() {
+            a.innerText = 'Rusty!'
+            a.style.background = 'red'
+        }
+        function toin() {
+            a.innerText = 'excuse-me?'
+        }
+        function goway() {
+            a.innerText = 'comeback!'
+            a.style.background = 'green'
+        }
+    </script>
+</body>
+</html>

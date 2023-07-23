@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wich country</title>
+</head>
+<body>
+    <h1>Show your country</h1>
+    Type your country: <input type="str" name="country" id="coutry">
+    <input type="button" value="look up" onclick="lookup()">
+    <div id="ans"></div>
+    <script>
+        function lookup() {
+        var nacion = window.document.querySelector('input#country')
+        var ans = window.document.querySelector('div#ans')
+       
+        ans.innerHTML = `<p> You are from ${ans}.</p>`
+        if (ans != Brazil) {
+            ans.innerHTML += `<p>You are immigrant</p>.`
+        }else {
+            ans.innerHTML += `<p>You are Brazilian. </p>`
+        }
+        }
+    </script>
+    
+</body>
+</html>
