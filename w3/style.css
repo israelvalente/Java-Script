@@ -1,0 +1,15 @@
+@charset
+
+* {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+button {
+    
+    margin: 3em;
+    padding: 5em;
+}
+button:hover {
+    background-color: blue;
+    box-shadow: 5 10 30 rgba(0, 0, 0, 0.596);
+}
